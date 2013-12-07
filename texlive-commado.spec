@@ -6,7 +6,7 @@
 # catalog-version 0.11
 Name:		texlive-commado
 Version:	0.11
-Release:	1
+Release:	2
 Summary:	Expandable iteration on comma-separated and filename lists
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/commado
