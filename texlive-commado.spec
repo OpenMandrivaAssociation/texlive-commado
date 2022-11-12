@@ -1,19 +1,13 @@
-# revision 28419
-# category Package
-# catalog-ctan /macros/generic/commado
-# catalog-date 2012-12-02 13:05:20 +0100
-# catalog-license lppl1.3
-# catalog-version 0.11
 Name:		texlive-commado
-Version:	r0.11a
-Release:	2
+Version:	38875
+Release:	1
 Summary:	Expandable iteration on comma-separated and filename lists
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/commado
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/commado.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/commado.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/commado.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/commado.r38875.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/commado.doc.r38875.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/commado.source.r38875.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -33,12 +27,12 @@ expandable. The packages rely on packages plainpkg, and
 stacklet.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -54,7 +48,8 @@ stacklet.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
